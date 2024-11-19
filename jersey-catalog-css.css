@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.jersey-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.jersey-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.jersey-card:hover {
+    transform: scale(1.05);
+}
+
+.jersey-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.jersey-details {
+    padding: 20px;
+}
+
+.jersey-card h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.price {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.sizes, .colors {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: 2px solid #3498db;
+    background-color: transparent;
+    color: #3498db;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 12px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #27ae60;
+}
