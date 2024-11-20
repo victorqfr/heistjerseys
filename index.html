@@ -1,179 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-    <title>Jersey Catalog</title>
-    <title>Heist Jerseys                                                    Same quality, a third of the price.</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-max-width: 1200px;
-margin: 0 auto;
-padding: 20px;
-background-color: #f4f4f4;
-}
-.jersey-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
-}
-.jersey-card {
-background-color: white;
-border-radius: 8px;
-padding: 20px;
-box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.jersey-card img {
-width: 100%;
-height: 400px;
-object-fit: cover;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.jersey-card img:hover {
-transform: scale(1.05);
-}
-.modal {
-display: none;
-position: fixed;
-z-index: 1000;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0,0,0,0.8);
-justify-content: center;
-align-items: center;
-}
-.modal-content {
-max-width: 80%;
-max-height: 80%;
-object-fit: contain;
-}
-.close {
-color: white;
-position: absolute;
-top: 15px;
-right: 35px;
-font-size: 40px;
-font-weight: bold;
-cursor: pointer;
-}
-.sizes, .colors {
-display: flex;
-gap: 10px;
-margin: 10px 0;
-}
-.btn {
-padding: 5px 10px;
-border: 1px solid #ccc;
-cursor: pointer;
-}
-.btn-active {
-background-color: #007bff;
-color: white;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Heist Jerseys: Same quality, a third of the price.</title>
+
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="jersey-catalog-css.css">
 </head>
 <body>
-<h1>Jersey Catalog</h1>
-<div class="jersey-grid">
-<div class="jersey-card">
-<h2>Brazil 24/25</h2>
-<img src="Kits/BrazilK12425.jpg" alt="Jersey" onclick="openModal(this)">
-<p>Price: 29.99</p>
-<div>
-<h3>Sizes:</h3>
-<div class="sizes">
-<button class="btn">S</button>
-<button class="btn">M</button>
-<button class="btn">L</button>
-<button class="btn">XL</button>
-</div>
-</div>
-<div>
-<h3>Colors:</h3>
-<div class="colors">
-<button class="btn">Blue</button>
-<button class="btn">Red</button>
-<button class="btn">White</button>
-</div>
-</div>
-<button class="btn">Add to Cart</button>
-</div>
-<div class="jersey-card">
-<h2>Retro Vintage Jersey</h2>
-<img src="https://via.placeholder.com/300x400" alt="Jersey" onclick="openModal(this)">
-<p>Price: $89.99</p>
-<div>
-<h3>Sizes:</h3>
-<div class="sizes">
-<button class="btn">M</button>
-<button class="btn">L</button>
-<button class="btn">XL</button>
-</div>
-</div>
-<div>
-<h3>Colors:</h3>
-<div class="colors">
-<button class="btn">Green</button>
-<button class="btn">Yellow</button>
-<button class="btn">Gray</button>
-</div>
-</div>
-<button class="btn">Add to Cart</button>
-</div>
-<div class="jersey-card">
-<h2>Performance Pro Jersey</h2>
-<img src="https://via.placeholder.com/300x400" alt="Jersey" onclick="openModal(this)">
-<p>Price: $99.99</p>
-<div>
-<h3>Sizes:</h3>
-<div class="sizes">
-<button class="btn">S</button>
-<button class="btn">M</button>
-<button class="btn">L</button>
-<button class="btn">XL</button>
-<button class="btn">2XL</button>
-</div>
-</div>
-<div>
-<h3>Colors:</h3>
-<div class="colors">
-<button class="btn">Black</button>
-<button class="btn">Navy</button>
-<button class="btn">Red</button>
-</div>
-</div>
-<button class="btn">Add to Cart</button>
-</div>
-</div>
+    <h1>Heist Jerseys: Same quality, a third of the price.</h1>
+    <div class="jersey-grid">
+        <div class="jersey-card">
+            <h2>Brazil 24/25</h2>
+            <img src="Kits/BrazilK12425.jpg" alt="Jersey" onclick="openModal(this)">
+            <p>Price: 29.99</p>
+            <div>
+                <h3>Sizes:</h3>
+                <div class="sizes">
+                    <button class="btn">S</button>
+                    <button class="btn">M</button>
+                    <button class="btn">L</button>
+                    <button class="btn">XL</button>
+                </div>
+            </div>
+            <div>
+                <h3>Colors:</h3>
+                <div class="colors">
+                    <button class="btn">Blue</button>
+                    <button class="btn">Red</button>
+                    <button class="btn">White</button>
+                </div>
+            </div>
+            <button class="btn">Add to Cart</button>
+        </div>
 
-<!-- Modal for image zoom -->
-<div id="imageModal" class="modal" onclick="closeModal()">
-<span class="close">&times;</span>
-<img class="modal-content" id="modalImage">
-</div>
+        <div class="jersey-card">
+            <h2>Retro Vintage Jersey</h2>
+            <img src="https://via.placeholder.com/300x400" alt="Jersey" onclick="openModal(this)">
+            <p>Price: $89.99</p>
+            <div>
+                <h3>Sizes:</h3>
+                <div class="sizes">
+                    <button class="btn">M</button>
+                    <button class="btn">L</button>
+                    <button class="btn">XL</button>
+                </div>
+            </div>
+            <div>
+                <h3>Colors:</h3>
+                <div class="colors">
+                    <button class="btn">Green</button>
+                    <button class="btn">Yellow</button>
+                    <button class="btn">Gray</button>
+                </div>
+            </div>
+            <button class="btn">Add to Cart</button>
+        </div>
 
-<script>
-function openModal(img) {
-const modal = document.getElementById('imageModal');
-const modalImg = document.getElementById('modalImage');
-modal.style.display = 'flex';
-modalImg.src = img.src;
-}
+        <div class="jersey-card">
+            <h2>Performance Pro Jersey</h2>
+            <img src="https://via.placeholder.com/300x400" alt="Jersey" onclick="openModal(this)">
+            <p>Price: $99.99</p>
+            <div>
+                <h3>Sizes:</h3>
+                <div class="sizes">
+                    <button class="btn">S</button>
+                    <button class="btn">M</button>
+                    <button class="btn">L</button>
+                    <button class="btn">XL</button>
+                    <button class="btn">2XL</button>
+                </div>
+            </div>
+            <div>
+                <h3>Colors:</h3>
+                <div class="colors">
+                    <button class="btn">Black</button>
+                    <button class="btn">Navy</button>
+                    <button class="btn">Red</button>
+                </div>
+            </div>
+            <button class="btn">Add to Cart</button>
+        </div>
+    </div>
 
-function closeModal() {
-const modal = document.getElementById('imageModal');
-modal.style.display = 'none';
-}
+    <!-- Modal for image zoom -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 
-// Close modal if ESC key is pressed
-document.addEventListener('keydown', function(event) {
-if (event.key === 'Escape') {
-closeModal();
-}
-});
-</script>
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal if ESC key is pressed
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
