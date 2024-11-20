@@ -75,76 +75,38 @@
     </style>
 </head>
 <body>
-    <h1>Heist Jerseys                                                    Same quality, a third of the price.</h1>
-    <div class="jersey-grid">
-        <div class="jersey-card">
-            <h2>Brazil 24/25</h2>
-            <img src="Kits/BrazilK12425.jpg" alt="Jersey" onclick="openModal(this)">
-            <p>Price: 29.99</p>
-            <div>
-                <h3>Sizes:</h3>
-                <div class="sizes">
-                    <button class="btn">S</button>
-                    <button class="btn">M</button>
-                    <button class="btn">L</button>
-                    <button class="btn">XL</button>
-                </div>
-            </div>
-            <div>
-                <h3>Colors:</h3>
-                <div class="colors">
-                    <button class="btn">Blue</button>
-                    <button class="btn">Red</button>
-                    <button class="btn">White</button>
-                </div>
-            </div>
-            <button class="btn">Add to Cart</button>
+    <div class="container">
+        <!-- Header container to align the heading with jersey grid -->
+        <div class="header-container">
+            <h1>Heist Jerseys: Same quality, a third of the price.</h1>
         </div>
-        <div class="jersey-card">
-            <h2>Retro Vintage Jersey</h2>
-            <img src="https://via.placeholder.com/300x400" alt="Jersey" onclick="openModal(this)">
-            <p>Price: $89.99</p>
-            <div>
-                <h3>Sizes:</h3>
-                <div class="sizes">
-                    <button class="btn">M</button>
-                    <button class="btn">L</button>
-                    <button class="btn">XL</button>
+
+        <!-- Jersey Grid -->
+        <div class="jersey-grid">
+            <div class="jersey-card">
+                <h2>Brazil 24/25</h2>
+                <img src="Kits/BrazilK12425.jpg" alt="Jersey" onclick="openModal(this)">
+                <p>Price: 29.99</p>
+                <div>
+                    <h3>Sizes:</h3>
+                    <div class="sizes">
+                        <button class="btn">S</button>
+                        <button class="btn">M</button>
+                        <button class="btn">L</button>
+                        <button class="btn">XL</button>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <h3>Colors:</h3>
-                <div class="colors">
-                    <button class="btn">Green</button>
-                    <button class="btn">Yellow</button>
-                    <button class="btn">Gray</button>
+                <div>
+                    <h3>Colors:</h3>
+                    <div class="colors">
+                        <button class="btn">Blue</button>
+                        <button class="btn">Red</button>
+                        <button class="btn">White</button>
+                    </div>
                 </div>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
-            <button class="btn">Add to Cart</button>
-        </div>
-        <div class="jersey-card">
-            <h2>Performance Pro Jersey</h2>
-            <img src="https://via.placeholder.com/300x400" alt="Jersey" onclick="openModal(this)">
-            <p>Price: $99.99</p>
-            <div>
-                <h3>Sizes:</h3>
-                <div class="sizes">
-                    <button class="btn">S</button>
-                    <button class="btn">M</button>
-                    <button class="btn">L</button>
-                    <button class="btn">XL</button>
-                    <button class="btn">2XL</button>
-                </div>
-            </div>
-            <div>
-                <h3>Colors:</h3>
-                <div class="colors">
-                    <button class="btn">Black</button>
-                    <button class="btn">Navy</button>
-                    <button class="btn">Red</button>
-                </div>
-            </div>
-            <button class="btn">Add to Cart</button>
+            <!-- Repeat for other jerseys... -->
         </div>
     </div>
 
@@ -175,4 +137,3 @@
         });
     </script>
 </body>
-</html>
