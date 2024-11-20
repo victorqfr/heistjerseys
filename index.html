@@ -26,6 +26,37 @@
             width: 100%;
             height: 400px;
             object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .jersey-card img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+        .close {
+            color: white;
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
         }
         .sizes, .colors {
             display: flex;
@@ -48,7 +79,7 @@
     <div class="jersey-grid">
         <div class="jersey-card">
             <h2>Brazil 24/25</h2>
-            <img src="Kits/BrazilK12425.jpg" alt="Jersey">
+            <img src="Kits/BrazilK12425.jpg" alt="Jersey" onclick="openModal(this)">
             <p>Price: 29.99</p>
             <div>
                 <h3>Sizes:</h3>
@@ -69,10 +100,9 @@
             </div>
             <button class="btn">Add to Cart</button>
         </div>
-
         <div class="jersey-card">
             <h2>Retro Vintage Jersey</h2>
-            <img src="https://via.placeholder.com/300x400" alt="Jersey">
+            <img src="https://via.placeholder.com/300x400" alt="Jersey" onclick="openModal(this)">
             <p>Price: $89.99</p>
             <div>
                 <h3>Sizes:</h3>
@@ -92,10 +122,9 @@
             </div>
             <button class="btn">Add to Cart</button>
         </div>
-
         <div class="jersey-card">
             <h2>Performance Pro Jersey</h2>
-            <img src="https://via.placeholder.com/300x400" alt="Jersey">
+            <img src="https://via.placeholder.com/300x400" alt="Jersey" onclick="openModal(this)">
             <p>Price: $99.99</p>
             <div>
                 <h3>Sizes:</h3>
@@ -118,5 +147,32 @@
             <button class="btn">Add to Cart</button>
         </div>
     </div>
+
+    <!-- Modal for image zoom -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal if ESC key is pressed
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
