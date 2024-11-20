@@ -45,7 +45,7 @@ h1 {
 }
 .jersey-card img {
     width: 100%;
-    height: 580px;
+    height: 680px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
