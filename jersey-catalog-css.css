@@ -17,15 +17,26 @@ body {
     margin: 0 auto;
 }
 
-h1 {
-    text-align: center;
-    color: #2c3e50;
+/* Flexbox for Header and Jersey Grid */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 40px;
+}
+
+/* Header Styling */
+h1 {
+    text-align: left;
+    color: #2c3e50;
+    margin: 0;
     font-size: 2.5em;
     text-transform: uppercase;
     letter-spacing: 2px;
+    width: 50%; /* Adjust the width of the heading */
 }
 
+/* Jersey Grid */
 .jersey-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
